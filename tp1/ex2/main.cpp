@@ -4,8 +4,8 @@
 
 int main()
 {
-    Person person = { "Palluche", "La Faluche" };
-    std::cout << "La personne s'appelle " << person.first_name << " " << person.surname << std::endl;
+    Person person {"Palluche", "La Faluche"};
+    std::cout << "La personne s'appelle " << person.getFirstName() << " " << person.getSurname() << std::endl;
 
     return 0;
 }

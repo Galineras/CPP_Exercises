@@ -1,8 +1,16 @@
 #include <string>
 
-class Person
+struct Person
 {
+private:
+    std::string _first_name;
+    std::string _surname;
 public:
-    std::string first_name;
-    std::string surname;
+    Person(const std::string fname, const std::string sname)
+    : _first_name { fname }
+    , _surname { sname }
+    {}
+    
+    std::string getFirstName();
+    std::string getSurname();
 };
