@@ -1,0 +1,38 @@
+A)  1)
+La ligne "auto  last_wheel = car.wheels.back();"
+réalise une copie de la valeur stockée dans car.wheels.back()
+au lieu de renvoyer la référence vers l'emplacement mémoire
+Il n'y a donc pas de relation entre last_wheel et car.wheels.back()
+
+"auto& first_wheel = car.wheels.front();" prend la référence
+de la valeur stockée dans car.wheels.front() et la relie à first_wheel
+Il y a donc bien une relation entre first_wheel et car.wheels.front()
+
+B)  1)
+Les pointeurs sont des cases pleines. Les références sont des cases
+pointillées.
+Sur les lignes pointillées du second graphe, l'origine de la flèche
+représente le pointeur et la pointe de la flèche est la référence.
+    2)
+Un pointeur nul voit sa flèche pointer vers un cercle croisé.
+    3)
+Un pointeur est représenté par un "*" après le type de donnée. La
+référence est représentée par un "&" après le type.
+Un pointeur est créé à partir de la référence vers une donnée.
+Une référence est créée à partir de la donnée elle-même.
+
+C)  1)
+En cas de réallocation, les anciennes adresses mémoire ne sont plus
+valides car les données sont déplacées dans un nouveau buffer.
+    2)
+La référence de first_product ne pointe donc plus vers la
+première valeur du tableau. La référence est donc sensible à la
+réallocation mémoire.
+    3)
+(voir code)
+    4)
+Les cases du tableau products pointent maintenant sur les références
+de product, donc le sens des flèches pointillées sera inversé.
+    5)
+En cas de réallocation mémoire, seuls les pointeurs sont changés de
+position en mémoire, mais pas les données sur lesquelles ils pointent.

@@ -1,0 +1,16 @@
+1)
+1 - A : renvoyer system.employees
+    B : pour chaque département de system.departments, concaténer department.employees
+    C : parcourir l'arbre des employés de la variable employees (w/o managers)
+2 - A : renvoyer system.departments
+    B : renvoyer system.departments
+    C : renvoyer system.departments
+3 - A : accéder à system.departments, trouver le bon department, renvoyer department.employees
+    B : accéder à system.departments, trouver le bon department, renvoyer department.employees
+    C : parcourir l'arbre de system.employees (w/o managers), concaténer chaque employé du bon department
+4 - A : 
+    ...
+
+3)  1)
+On utilise une list pour pouvoir insérer de nouveaux éléments en
+complexité constante O(1) sur de nombreux éléments.

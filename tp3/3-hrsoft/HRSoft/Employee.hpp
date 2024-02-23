@@ -1,6 +1,7 @@
 #pragma once
 
 #include <list>
+#include <iostream>
 #include <ostream>
 #include <string>
 
@@ -14,10 +15,23 @@ public:
     void add_subordinate(Employee& subordinate)
     {
         // TODO - Q3
-        // ...
+        _subordinates.emplace_back(&subordinate);
     }
 
     friend std::ostream& operator<<(std::ostream&, const Employee&);
+
+    void print_subordinates()
+    {
+        for(auto sub : _subordinates)
+        {
+            std::cout << *sub << std::endl;
+        }
+    }
+
+    bool operator==(Employee other)
+    {
+        return other._name == _name && other._salary == _salary;
+    }
 
 private:
     std::string _name;

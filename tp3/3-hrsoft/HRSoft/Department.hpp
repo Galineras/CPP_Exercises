@@ -2,6 +2,7 @@
 
 #include "Employee.hpp"
 
+#include <iostream>
 #include <list>
 #include <string>
 
@@ -22,6 +23,24 @@ public:
         }
 
         return employee;
+    }
+
+    void print_employees()
+    {
+        for(auto employee : _employees)
+        {
+            std::cout << employee << std::endl;
+        }
+    }
+
+    std::string get_name()
+    {
+        return _name;
+    }
+
+    void remove_employee(Employee& employee)
+    {
+        _employees.remove(employee);
     }
 
 private:
